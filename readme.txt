@@ -37,21 +37,21 @@ If you have any issue you can send a bug report.
 = Where can I get support? =
 
 
-The support forums can be found at <a href="http://smartyblogs.com/forums/">http://smartyblogs.com/forums/</a>.
+The support forums can be found at <a href="http://smartyblog.com/forums/">http://smartyblog.com/forums/</a>.
 
 
 
 = Where can I find documentation? =
 
 
-The documentation codex can be found at <a href="http://smartyblogs.com/">http://smartyblogs.com/</a>.
+The documentation codex can be found at <a href="http://smartyblog.com/">http://smartyblog.com/</a>.
 
 
 
 = Where can I report a bug? =
 
 
-Report bugs at <a href="http://smartyblogs.com/">http://smartyblogs.com/</a>.
+Report bugs at <a href="http://smartyblog.com/">http://smartyblog.com/</a>.
 
 == Screenshots ==
 
