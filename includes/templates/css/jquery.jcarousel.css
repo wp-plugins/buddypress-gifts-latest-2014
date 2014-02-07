@@ -1,0 +1,111 @@
+/**
+ * This <div> element is wrapped by jCarousel around the list
+ * and has the classname "jcarousel-container".
+ */
+ /*
+.jcarousel-container {
+    position: relative;
+}
+
+.jcarousel-clip {
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.jcarousel-list {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel-list li,
+.jcarousel-item {
+    float: left;
+    list-style: none;
+    width: 75px;
+    height: 75px;
+}
+
+
+.jcarousel-next {
+    z-index: 3;
+    display: none;
+}
+
+.jcarousel-prev {
+    z-index: 3;
+    display: none;
+}
+*/
+
+			.wrapper {
+				background-color: white;
+				width: 90%;
+				margin: auto;
+				padding: 5px;
+				box-shadow: 0 0 5px #999;
+			}
+			.list_carousel {
+				background-color: #ccc;
+				margin: 0 0 30px 30px;
+				width: 360px;
+			}
+			.list_carousel ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: block;
+			}
+			.list_carousel li {
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				background-color: #eee;
+				border: 5px solid #999;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				margin: 6px;
+				display: block;
+				float: left;
+			}
+			.list_carousel.responsive {
+				width: auto;
+				margin-left: 0;
+			}
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			.prev {
+				float: left;
+				margin-left: 10px;
+			}
+			.next {
+				float: right;
+				margin-right: 10px;
+			}
+			.pager {
+				float: left;
+				width: 300px;
+				text-align: center;
+			}
+			.pager a {
+				margin: 0 5px;
+				text-decoration: none;
+			}
+			.pager a.selected {
+				text-decoration: underline;
+			}
+			.timer {
+				background-color: #999;
+				height: 6px;
+				width: 0px;
+			}
