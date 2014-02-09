@@ -8,8 +8,6 @@ Stable tag: 1.0
 
 Latest development of popular plugin Buddypress Gifts. Send a gift image and message to user in BuddyPress profile using activity stream function.
 
-Note-This plugin at present is not compaible with Multisites. Work is under progress and very soon we will update the plugin to work for multisites.
-
 == Description ==
 
 This plugin is based on Buddypress Gifts developed by Warut and later given rebirth by Slawomir Kroczak. Because this author also abandoned his project I have decided to give it third life.
@@ -19,6 +17,8 @@ Buddypress Gifts latest 2014 gives user ability to send gifts image to other mem
 Member can choose a gift from gift box in others member gifts tab and type a message to receiver member.
 Receiver member can delete or reply message using activity stream function in own profile.
 Administrator can upload delete and edit gifts item in backend admin dashboard
+
+Note-This plugin at present is not compaible with Multisites. Work is under progress and very soon we will update the plugin to work for multisites.
 
 == Installation ==
 
