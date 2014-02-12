@@ -4,7 +4,7 @@ Contributors: Amreeta Ray
 Tags: buddypress, gifts, updated, latest, 2014, social networking, fun, community
 Requires at least: WordPress 3.8.1, BuddyPress 1.9.1
 Tested up to: WordPress 3.8.1 / BuddyPress 1.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Latest development of popular plugin Buddypress Gifts. Send a gift image and message to user in BuddyPress profile using activity stream function.
 

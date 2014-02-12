@@ -6,7 +6,7 @@
 Plugin Name: BuddyPress Gifts Latest 2014
 Plugin URI: http://wordpress.org/extend/plugins/bp-gifts-latest-2014/
 Description: Third life of popular Gifts component for buddypress.
-Version: 1.0
+Version: 1.1
 Revision Date: 07 01, 2014
 Requires at least: WP 3.3.1, BuddyPress 1.5.1
 Tested up to: WP 3.8.1, BuddyPress 1.9

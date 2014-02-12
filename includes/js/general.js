@@ -18,7 +18,20 @@ jQuery(document).ready( function() {
 		*/
 		jQuery('#mycarousel').carouFredSel({
 					responsive: true,
+					circular: true,         
+					infinite: true,        
+					direction: "left",      
+					height: null,          
+					align: "center",        
+					padding: null,          
+					synchronise: null,      
+					cookie: false,         
+					onCreate: null,          
 					width: '100%',
+					prev: '#prev3',
+					next: '#next3',
+					auto: true,
+					mousewheel: true,
 					scroll: 2,
 					items: {
 						width: 75,
@@ -34,6 +47,7 @@ jQuery(document).ready( function() {
 		var imagepath = jQuery(this).attr("src");
 		var imageid = jQuery(this).attr("id");
 		var imagename = jQuery(this).attr("name");
+		var imagepoint = jQuery(this).attr("point");
 		var previousegift = jQuery('img.giftbox').attr("id");
 		var selectedgift = 'img.giftitem#' + previousegift;
 		if (previousegift == '999'){selectedgift = 'img.giftbox';}
@@ -48,6 +62,7 @@ jQuery(document).ready( function() {
 		jQuery('img.giftbox').attr("src",imagepath);
 		jQuery('img.giftbox').attr("id",imageid);
 		jQuery('img.giftbox').attr("name",imagename);
+		jQuery('img.giftbox').attr("point",imagepoint);
 		//jQuery('img#gifts').attr("src",aaa);
 		//jQuery('textarea').val(aaa);
 		//jQuery('input#gift-button-submit').hidden;
@@ -82,6 +97,7 @@ jQuery(document).ready( function() {
 				'gift_id': jQuery('img.giftbox').attr("id"),
 				'gift_name': jQuery('img.giftbox').attr("name"),
 				'gift_path': jQuery('img.giftbox').attr("src"),
+				'point': jQuery('img.giftbox').attr("point"),
 				'gift_message': jQuery('textarea#giftms').val()
 				},
 				function(response)

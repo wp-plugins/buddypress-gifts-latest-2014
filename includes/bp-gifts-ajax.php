@@ -11,15 +11,14 @@ function bpgifts_sendgift_updatedb() {
 
 	$content = '<img class="gift-image" src="'. $_POST['gift_path'] .'" /><a href="'.$bp->displayed_user->domain.'">@'.$bp->displayed_user->userdata->user_login.'</a> '.$_POST['gift_message'];
 
-
 	bp_gifts_record_activity( array( 'type' => 'new_gifts', 'action' => $action, 'user_id' => $bp->loggedin_user->id, 'item_id' => $bp->displayed_user->id, 'content' => $content) );
-
 	
+	bp_gifts_record_points();
 
 	echo __('Gifts was sent !', 'bp-gifts');
-
-
-	//send e-mail to received 
+	//var_dump($_POST['gift_id']);
+	//var_dump("Sweta");
+	exit;
 
 	bp_gifts_send_giftsnotify( $bp->displayed_user->id, $bp->loggedin_user->id );
 

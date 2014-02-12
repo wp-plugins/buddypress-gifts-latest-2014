@@ -125,11 +125,14 @@
    					foreach ($allgift as $giftitem) 
    						{
 
-    					echo '<li><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/bp-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="" /></li>';
-
+    					echo '<li><div><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/bp-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="'.$giftitem->gift_name.'" point="'.$giftitem->point.'" /></div><div>'.$giftitem->point.'</div>
+						</li>';
 						}?>
 
 				</ul>
+                <div class="clearfix"></div>
+				<a id="prev3" class="prev" href="#">&lt;</a>
+				<a id="next3" class="next" href="#">&gt;</a>
 				</div>
 				</div>
 
@@ -194,13 +197,16 @@
 
    		foreach ($allgift as $giftitem) {
 
-    		echo '<li><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/bp-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="" /></li>';
+    		echo '<li><div><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/bp-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="'.$giftitem->gift_name.'" point="'.$giftitem->point.'" /></div><div>'.$giftitem->point.'</div></li>';
 
 			}
 
 			?>
 
 		</ul>
+        <div class="clearfix"></div>
+        <a id="prev3" class="prev" href="#">&lt;</a>
+        <a id="next3" class="next" href="#">&gt;</a>
 		</div>
 		</div>
 

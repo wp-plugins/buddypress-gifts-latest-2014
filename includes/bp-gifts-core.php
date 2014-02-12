@@ -96,13 +96,8 @@ load_textdomain( 'bp-gifts', dirname( __FILE__ ) . '/languages/bp-gifts-' . get_
 function bp_gifts_setup_globals() {
 
 	global $bp, $wpdb;
-    /*
-	if (!is_object($bp->gifts)) {
-		$bp->gifts = new stdClass;
-	} else {*/
+
 	$bp->gifts->id = 'gifts';
-
-
 
 	$bp->gifts->table_name = $wpdb->base_prefix . 'bp_gifts';
 
@@ -111,7 +106,6 @@ function bp_gifts_setup_globals() {
 	$bp->gifts->format_notification_function = 'bp_gifts_format_notifications';
 
 	$bp->gifts->slug = BP_GIFTS_SLUG;
-	//}
 
 	$bp->active_components[$bp->gifts->slug] = $bp->gifts->id;
 
@@ -568,7 +562,6 @@ function bp_gifts_screen_notification_settings() {
 add_action( 'bp_notification_settings', 'bp_gifts_screen_notification_settings' );
 
 
-
 function bp_gifts_record_activity( $args = '' ) {
 
 	global $bp;
@@ -612,15 +605,22 @@ function bp_gifts_record_activity( $args = '' ) {
 	$r = wp_parse_args( $args, $defaults );
 
 	extract( $r );
-
-
+	
 
 	return bp_activity_add( array( 'id' => $id, 'user_id' => $user_id, 'action' => $action, 'content' => $content, 'primary_link' => $primary_link, 'component' => $component, 'type' => $type, 'item_id' => $item_id, 'secondary_item_id' => $secondary_item_id, 'recorded_time' => $recorded_time, 'hide_sitewide' => $hide_sitewide ) );
+	
+}
+
+function bp_gifts_record_points(){
+
+		if( function_exists('cp_alterPoints') && is_user_logged_in() ){
+			cp_alterPoints(cp_currentUser(), -($_POST['point']));
+			cp_log('Points Deducted for Gift', cp_currentUser(), -($_POST['point']), Gifts);
+		}
 
 }
 
-
-
+//add_action( 'bp_activity_add', 'bp_gifts_record_points');
 
 
 function bp_gifts_format_notifications( $action, $item_id, $secondary_item_id, $total_items ) {

@@ -49,11 +49,12 @@ class BP_Gifts {
 	 * with a row from the table if an ID is provided.
 
 	 */
-	
-	
+
 	function bp_gifts( $id = null ) {
 
 		global $wpdb, $bp;
+
+		
 
 		if ( $id ) {
 
@@ -85,8 +86,8 @@ class BP_Gifts {
 
 		
 
-		if ( $row = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM ".$wpdb->base_prefix."bp_gifts WHERE id = %d", $this->id ) ) ) {
-			
+		if ( $row = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$bp->gifts->table_name} WHERE id = %d", $this->id ) ) ) {
+
 			$this->gift_name = $row->gift_name;
 
 			$this->gift_image = $row->gift_image;
@@ -113,7 +114,7 @@ class BP_Gifts {
 
 	 */
 
-	
+		
 
 	function save() {
 
@@ -137,7 +138,7 @@ class BP_Gifts {
 
 			$result = $wpdb->query( $wpdb->prepare( 
 
-					"UPDATE ".$wpdb->base_prefix."bp_gifts SET 
+					"UPDATE {$bp->gifts->table_name} SET 
 
 						gift_name = %s,
 
@@ -167,7 +168,7 @@ class BP_Gifts {
 
 			$result = $wpdb->query( $wpdb->prepare( 
 
-					"INSERT INTO ".$wpdb->base_prefix."bp_gifts ( 
+					"INSERT INTO {$bp->gifts->table_name} ( 
 
 						gift_name,
 
@@ -182,7 +183,7 @@ class BP_Gifts {
 						%d, %d, %d, %d 
 
 					)", 
-						
+
 						$this->gift_name,
 
 						$this->gift_image,
@@ -215,8 +216,6 @@ class BP_Gifts {
 
 		do_action( 'bp_gifts_data_after_save', $this ); 
 
-		
-
 		return $result;
 
 	}
@@ -239,11 +238,19 @@ class BP_Gifts {
 
 		
 
-		return $wpdb->query( $wpdb->prepare( "DELETE FROM ".$wpdb->base_prefix."bp_gifts WHERE id = %d", $this->id ) );
+		return $wpdb->query( $wpdb->prepare( "DELETE FROM {$bp->gifts->table_name} WHERE id = %d", $this->id ) );
 
 	}
 
+	function getpoint() {
 
+		global $wpdb, $bp;
+
+		
+		$point = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$bp->gifts->table_name} WHERE id = %d", $this->id) );
+		return $point;
+
+	}
 
 	/* Static Functions */
 
@@ -287,9 +294,11 @@ function bp_gifts_allgift() {
 
 	
 
-	$allgift = $wpdb->get_results( $wpdb->prepare("SELECT * FROM ".$wpdb->base_prefix."bp_gifts ","") );
-	
+	$allgift = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$bp->gifts->table_name} ") );
+
 	return $allgift;
+
+
 
 }
 
@@ -299,7 +308,7 @@ function bp_gifts_newgift($giftname, $giftimage, $category = 'gifts', $point = 0
 
 	global $bp, $wpdb;
 
-	$insertgift = $wpdb->prepare("INSERT INTO ".$wpdb->base_prefix."bp_gifts (gift_name, gift_image, category, point) VALUES (%s, %s, %s, %d)", $giftname, $giftimage, $category, $point);
+	$insertgift = $wpdb->prepare("INSERT INTO {$bp->gifts->table_name} (gift_name, gift_image, category, point) VALUES (%s, %s, %s, %d)",$giftname, $giftimage, $category, $point);
 
 	$newgift = $wpdb->query( $insertgift );
 
