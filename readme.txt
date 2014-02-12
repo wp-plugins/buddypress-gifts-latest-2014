@@ -66,3 +66,6 @@ Report bugs at <a href="http://smartyblog.com/">http://smartyblog.com/</a>.
 = 1.0 =
 * first beta release version 
 * no clean uninstall. have to manual delete buddypress-gifts-rebirth table and activity stream after uninstall 
+= 1.1 =
+* cubepoints is now fully integrated. Viewers can send a gift only if they have required number of points for that gift. 
+* previous and next button added to the image carousel. 
