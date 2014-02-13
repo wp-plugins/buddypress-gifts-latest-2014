@@ -3,8 +3,8 @@
 
 
 /*
-Plugin Name: BP Gifts Latest 2014
-Plugin URI: http://wordpress.org/extend/plugins/bp-gifts-latest-2014/
+Plugin Name: Buddypress Gifts Latest 2014
+Plugin URI: http://wordpress.org/extend/plugins/buddypress-gifts-latest-2014/
 Description: Third life of popular Gifts component for buddypress.
 Version: 1.1
 Revision Date: 07 01, 2014

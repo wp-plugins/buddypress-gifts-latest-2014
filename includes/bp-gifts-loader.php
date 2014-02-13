@@ -174,8 +174,11 @@ class BP_Gifts_Component extends BP_Component {
 
 		// As an example of how you might do it manually, let's include the functions used
 		// on the WordPress Dashboard conditionally:
-		if ( is_admin() || is_network_admin() ) {
+		if ( is_admin && !is_network_admin() ) {
 			include( BP_GIFTS_PLUGIN_DIR . '/includes/bp-gifts-admin.php' );
+		}
+		if ( is_admin() && is_network_admin() ) {
+			include( BP_GIFTS_PLUGIN_DIR . '/includes/bp-gifts-admin-network.php' );
 		}
 	}
 

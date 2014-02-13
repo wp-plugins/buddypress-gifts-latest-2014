@@ -242,16 +242,6 @@ class BP_Gifts {
 
 	}
 
-	function getpoint() {
-
-		global $wpdb, $bp;
-
-		
-		$point = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$bp->gifts->table_name} WHERE id = %d", $this->id) );
-		return $point;
-
-	}
-
 	/* Static Functions */
 
 

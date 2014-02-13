@@ -44,9 +44,9 @@ function bp_gifts_add_js() {
 	if ( $bp->current_component == $bp->gifts->slug ) {
 
 
-		wp_enqueue_script( 'bpgift-general',WP_PLUGIN_URL.'/bp-gifts-latest-2014/includes/js/general.js'); 
+		wp_enqueue_script( 'bpgift-general',WP_PLUGIN_URL.'/buddypress-gifts-latest-2014/includes/js/general.js'); 
 
-		wp_enqueue_script( 'bpgift-jcarousel',WP_PLUGIN_URL.'/bp-gifts-latest-2014/includes/js/jquery.jcarousel.pack.js'); 
+		wp_enqueue_script( 'bpgift-jcarousel',WP_PLUGIN_URL.'/buddypress-gifts-latest-2014/includes/js/jquery.jcarousel.pack.js'); 
 
 	}
 
@@ -60,8 +60,8 @@ function bp_gifts_add_css() {
 	
 	if ( $bp->current_component == $bp->gifts->slug ) {
 		
-		wp_enqueue_style( 'bpgift-jcarousel', WP_PLUGIN_URL .'/bp-gifts-latest-2014/includes/templates/css/jquery.jcarousel.css' );
-		wp_enqueue_style( 'bpgift-jcarousel-skin', WP_PLUGIN_URL .'/bp-gifts-latest-2014/includes/templates/css/skin.css' );
+		wp_enqueue_style( 'bpgift-jcarousel', WP_PLUGIN_URL .'/buddypress-gifts-latest-2014/includes/templates/css/jquery.jcarousel.css' );
+		wp_enqueue_style( 'bpgift-jcarousel-skin', WP_PLUGIN_URL .'/buddypress-gifts-latest-2014/includes/templates/css/skin.css' );
 		wp_print_styles();	
 	}
 	

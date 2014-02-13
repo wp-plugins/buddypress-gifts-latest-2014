@@ -4,7 +4,7 @@ Contributors: Amreeta Ray
 Tags: buddypress, gifts, updated, latest, 2014, social networking, fun, community
 Requires at least: WordPress 3.8.1, BuddyPress 1.9.1
 Tested up to: WordPress 3.8.1 / BuddyPress 1.9.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 Latest development of popular plugin Buddypress Gifts. Send a gift image and message to user in BuddyPress profile using activity stream function.
 
@@ -20,12 +20,14 @@ Administrator can upload delete and edit gifts item in backend admin dashboard
 
 Note-This plugin at present is not compaible with Multisites. Work is under progress and very soon we will update the plugin to work for multisites.
 
+Till i get 100% satisfaction i will not remove the notes given above although i have tried to implement the multisite network issue part. Users can test and report bugs.
+
 == Installation ==
 
-1. Upload bp-gifts-latest-2014 to the /wp-content/plugins/ directory or use automatic installation from wp plugin panel
+1. Upload buddypress-gifts-latest-2014 to the /wp-content/plugins/ directory or use automatic installation from wp plugin panel
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-* best to upload 64*64px image to bp-gifts-latest-2014/includes/images before activate if want to use own gifts image or add one by one in admin dashboard
+* best to upload 64*64px image to buddypress-gifts-latest-2014/includes/images before activate if want to use own gifts image or add one by one in admin dashboard
 
 == Frequently Asked Questions ==
 
@@ -69,3 +71,8 @@ Report bugs at <a href="http://smartyblog.com/">http://smartyblog.com/</a>.
 = 1.1 =
 * cubepoints is now fully integrated. Viewers can send a gift only if they have required number of points for that gift. 
 * previous and next button added to the image carousel. 
+= 1.2 =
+* problem with notification solved. 
+* condition added for sending gift. required points not met gift cannot be send.
+* Tried to solve the multisite issue. Found Bugs than Kindly report in the support section so that i can edit my plugin accordingly. 
+* Further the image linking problem resolved.

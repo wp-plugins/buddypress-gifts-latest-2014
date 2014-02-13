@@ -107,7 +107,7 @@
 			else
 			{ ?>
 
-				<div id="bpgifts-waiting" style="display:none"><img src="<?php echo plugins_url('/bp-gifts-latest-2014/includes/templates/css/loading.gif') ?>" /></div>
+				<div id="bpgifts-waiting" style="display:none"><img src="<?php echo plugins_url('/buddypress-gifts-latest-2014/includes/templates/css/loading.gif') ?>" /></div>
 				<div id="bpgifts-alert"></div><br />
 				<div class="sendgift-panel">
 
@@ -125,7 +125,7 @@
    					foreach ($allgift as $giftitem) 
    						{
 
-    					echo '<li><div><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/bp-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="'.$giftitem->gift_name.'" point="'.$giftitem->point.'" /></div><div>'.$giftitem->point.'</div>
+    					echo '<li><div><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/buddypress-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="'.$giftitem->gift_name.'" point="'.$giftitem->point.'" /></div><div>'.$giftitem->point.'</div>
 						</li>';
 						}?>
 
@@ -142,7 +142,7 @@
 
 				<div class="giftbox">
 				
-				<img class="giftbox" id="999" name="emptybox" src="<?php echo plugins_url('/bp-gifts-latest-2014/includes/images/admin/emptybox.png') ?>" style="float:left; padding: 20px;"/>
+				<img class="giftbox" id="999" name="emptybox" src="<?php echo plugins_url('/buddypress-gifts-latest-2014/includes/images/admin/emptybox.png') ?>" style="float:left; padding: 20px;"/>
 
 				</div>
 
@@ -176,7 +176,7 @@
 	else 
 	{	?>		
 	
-		<div id="bpgifts-waiting" style="display:none"><img src="<?php echo plugins_url('/bp-gifts-latest-2014/includes/templates/css/loading.gif') ?>" /></div>
+		<div id="bpgifts-waiting" style="display:none"><img src="<?php echo plugins_url('/buddypress-gifts-latest-2014/includes/templates/css/loading.gif') ?>" /></div>
 		<div id="bpgifts-alert"></div><br />
 
 				
@@ -197,7 +197,7 @@
 
    		foreach ($allgift as $giftitem) {
 
-    		echo '<li><div><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/bp-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="'.$giftitem->gift_name.'" point="'.$giftitem->point.'" /></div><div>'.$giftitem->point.'</div></li>';
+    		echo '<li><div><img class="giftitem" id="'.$giftitem->id.'" name="'.$giftitem->gift_name.'" src="'.plugins_url('/buddypress-gifts-latest-2014/includes/images/').$giftitem->gift_image.'" alt="'.$giftitem->gift_name.'" point="'.$giftitem->point.'" /></div><div>'.$giftitem->point.'</div></li>';
 
 			}
 
@@ -216,7 +216,7 @@
 		
 			<div class="giftbox">
 			
-			<img class="giftbox" id="999" name="emptybox" src="<?php echo plugins_url('/bp-gifts-latest-2014/includes/images/admin/emptybox.png') ?>" style="float:left; padding: 20px;"/>
+			<img class="giftbox" id="999" name="emptybox" src="<?php echo plugins_url('/buddypress-gifts-latest-2014/includes/images/admin/emptybox.png') ?>" style="float:left; padding: 20px;"/>
 
 			</div>
 

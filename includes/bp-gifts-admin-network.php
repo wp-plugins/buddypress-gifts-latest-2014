@@ -73,7 +73,7 @@ function bp_gifts_admin($message = '', $type = 'error') {
 
 		$message = sprintf( __('Gift item was upload successfully! <br/>', 'buddypress'), $type);
 
-		$dir = WP_PLUGIN_DIR.'/bp-gifts-latest-2014/includes/images';
+		$dir = WP_PLUGIN_DIR.'/buddypress-gifts-latest-2014/includes/images';
 
 		if (file_exists($dir.'/'.$_FILES["file"]["name"])){
 
@@ -134,7 +134,7 @@ function bp_gifts_admin($message = '', $type = 'error') {
 
 		echo '<h1>'._e( 'Gifts Item Admin', 'bp-gifts' ).'</h1><br/>';
 
-		echo '<img src="' . bp_get_root_domain() .'/wp-content/plugins/bp-gifts-latest-2014/includes/images/'. $gift->gift_image .'" />';
+		echo '<img src="' . bp_get_root_domain() .'/wp-content/plugins/buddypress-gifts-latest-2014/includes/images/'. $gift->gift_image .'" />';
 
 		?>
 
@@ -274,15 +274,15 @@ wp_nonce_field( 'gifts-settings' );
 
 			echo '<div style="float:left; width:10%; text-align:center;">';
 
-			echo '<img src="' . bp_get_root_domain() .'/wp-content/plugins/bp-gifts-latest-2014/includes/images/'. $giftitem->gift_image .'" /><br/>';
+			echo '<img src="' . bp_get_root_domain() .'/wp-content/plugins/buddypress-gifts-latest-2014/includes/images/'. $giftitem->gift_image .'" /><br/>';
 
 			echo '<p style="text-align: center">'.$giftitem->gift_name.'</p>';
 
 			echo '<p style="text-align: center">';
 
-			echo '<a href="'. site_url() . '/wp-admin/network/admin.php?page=bp-gifts-settings&gift_id='.$giftitem->id.'&mode=edit" /> <img src="'. bp_get_root_domain() .'/wp-content/plugins/bp-gifts-latest-2014/includes/images/admin/edit.png" /></a>';
+			echo '<a href="'. site_url() . '/wp-admin/network/admin.php?page=bp-gifts-settings&gift_id='.$giftitem->id.'&mode=edit" /> <img src="'. bp_get_root_domain() .'/wp-content/plugins/buddypress-gifts-latest-2014/includes/images/admin/edit.png" /></a>';
 
-			echo '<a href="'. site_url() . '/wp-admin/network/admin.php?page=bp-gifts-settings&gift_id='.$giftitem->id.'&mode=delete" /> <img src="'. bp_get_root_domain() .'/wp-content/plugins/bp-gifts-latest-2014/includes/images/admin/delete.png" /></a>';
+			echo '<a href="'. site_url() . '/wp-admin/network/admin.php?page=bp-gifts-settings&gift_id='.$giftitem->id.'&mode=delete" /> <img src="'. bp_get_root_domain() .'/wp-content/plugins/buddypress-gifts-latest-2014/includes/images/admin/delete.png" /></a>';
 
 			echo '<p/>';
 
