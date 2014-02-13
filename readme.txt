@@ -12,6 +12,10 @@ Latest development of popular plugin Buddypress Gifts. Send a gift image and mes
 
 This plugin is based on Buddypress Gifts developed by Warut and later given rebirth by Slawomir Kroczak. Because this author also abandoned his project I have decided to give it third life.
 
+Kindly note:-
+
+I have updated plugin to version 1.2. if you get a redeclare error in your admin page after activating the new plugin than you need to deactivate the old plugin starting with bp-gift and than you can activate the new plugin starting with buddypress-gift . This will solve your error.
+
 Buddypress Gifts latest 2014 gives user ability to send gifts image to other members in BuddyPress. It use activity stream to keep the gifts sent information.
 
 Member can choose a gift from gift box in others member gifts tab and type a message to receiver member.
