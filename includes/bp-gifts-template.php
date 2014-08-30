@@ -38,8 +38,8 @@
  * purpose. See bp-gifts-classes.php for more details.
  *
  */
-
-function bp_gifts_has_items( $args = '' ) {
+ 
+ function bp_gifts_has_items( $args = '' ) {
 	global $bp, $items_template;
 
 	// This keeps us from firing the query more than once

@@ -397,5 +397,4 @@ function bp_gifts_load_core_component() {
 }
 add_action( 'bp_loaded', 'bp_gifts_load_core_component' );
 
-
 ?>

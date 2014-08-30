@@ -284,7 +284,7 @@ function bp_gifts_allgift() {
 
 	
 
-	$allgift = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$bp->gifts->table_name} ") );
+	$allgift = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$bp->gifts->table_name} ", "") );
 
 	return $allgift;
 

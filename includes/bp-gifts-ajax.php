@@ -5,9 +5,13 @@ function bpgifts_sendgift_updatedb() {
 
 	global $bp;
 	
-	$Mypoint = (int)cp_getPoints(cp_currentUser());	
+	if (function_exists('cp_getPoints')) {
+	$Mypoint = (int)cp_getPoints(cp_currentUser());
+	} else {
+	$Mypoint = 0;
+	}
 	if($Mypoint <  $_POST['point']){
-		echo __('You dont required points to send that Gift. You can choose another gift!', 'bp-gifts');
+		echo __('You dont have required points to send that Gift. You can choose another gift!', 'bp-gifts');
 		exit;
 	}
 

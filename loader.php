@@ -107,6 +107,14 @@ function bp_gifts_activate() {
 
 
 	update_site_option( 'bp-gifts-db-version', BP_GIFTS_DB_VERSION );
+	
+	if ( !is_plugin_active('buddypress/bp-loader.php') ||!is_plugin_active('cubepoints/cubepoints.php') ) {
+	// Deactivate the plugin
+	deactivate_plugins(__FILE__);
+	// Throw an error in the wordpress admin console
+	$error_message = __('This plugin requires <a href="https://wordpress.org/plugins/buddypress/">Buddypress</a> &amp; <a href="http://wordpress.org/extend/plugins/cubepoints/">Cubepoints</a> plugins to be active!', 'buddypress');
+	die($error_message);
+	}
 
 }
 
