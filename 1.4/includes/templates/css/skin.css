@@ -1,0 +1,88 @@
+img.giftbox#999 {
+padding:10px;
+float:left;
+border:#3399CC;
+border:thick;
+}
+
+div.sendgift-panel {
+width: 100%;
+border:#3366CC;
+border:thin;
+background-color:#E1F5FF;
+padding: 15px;
+padding-bottom: 40px;
+margin-left: auto;
+margin-right: auto;
+}
+div#gift-button {
+float:right;
+background: white;
+background: -moz-linear-gradient(top, white 0%, #EDEDED 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,white), color-stop(100%,#EDEDED));
+background: -webkit-linear-gradient(top, white 0%,#EDEDED 100%);
+background: -o-linear-gradient(top, white 0%,#EDEDED 100%);
+background: -ms-linear-gradient(top, white 0%,#EDEDED 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+background: linear-gradient(top, white 0%,#EDEDED 100%);
+border: 1px solid #CCC;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+color: #777;
+cursor: pointer;
+font: normal 12px/20px Arial, Tahoma, Verdana, sans-serif;
+outline: none;
+padding: 4px 10px;
+text-align: center;
+text-decoration: none;
+line-height: 14px;
+margin: 10px 15px 5px 0px;
+}
+div#gift-button:hover {
+background: #EDEDED;
+background: -moz-linear-gradient(top, white 0%, #E0E0E0 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,white), color-stop(100%,#E0E0E0));
+background: -webkit-linear-gradient(top, white 0%,#E0E0E0 100%);
+background: -o-linear-gradient(top, white 0%,#E0E0E0 100%);
+background: -ms-linear-gradient(top, white 0%,#E0E0E0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );
+background: linear-gradient(top, white 0%,#E0E0E0 100%);
+border: 1px solid #BBB;
+color: #555;
+outline: none;
+text-decoration: none;
+}
+
+
+div.activity-comments form.ac-form-gifts {
+		display:none; 
+		margin: 10px 0 10px 33px;
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		padding: 8px;
+	}
+	
+span.bp-gift-highlight{
+font-size: 11px;
+padding: 0;
+margin-right: 5px;
+text-decoration: none;
+background: #EDEDED;
+background: -moz-linear-gradient(top, white 0%, #E0E0E0 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,white), color-stop(100%,#E0E0E0));
+background: -webkit-linear-gradient(top, white 0%,#E0E0E0 100%);
+background: -o-linear-gradient(top, white 0%,#E0E0E0 100%);
+background: -ms-linear-gradient(top, white 0%,#E0E0E0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );
+background: linear-gradient(top, white 0%,#E0E0E0 100%);
+border: 1px solid #BBB;
+color: #555;
+outline: none;
+text-decoration: none;	
+	
+}
