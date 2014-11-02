@@ -111,10 +111,10 @@ function bp_gifts_item_pagination() {
 	 * @package BuddyPress_Skeleton_Component
 	 * @since 1.6
 	 */
-	function bp_gifts_get_item_pagination() {
-		global $items_template;
-		return apply_filters( 'bp_gifts_get_item_pagination', $items_template->pag_links );
-	}
+function bp_gifts_get_item_pagination() {
+	global $items_template;
+	return apply_filters( 'bp_gifts_get_item_pagination', $items_template->pag_links );
+}
 
 /**
  * Echo the high-fiver avatar (post author)

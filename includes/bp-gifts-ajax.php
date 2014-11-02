@@ -5,11 +5,21 @@ function bpgifts_sendgift_updatedb() {
 
 	global $bp;
 	
-	if (function_exists('cp_getPoints')) {
-	$Mypoint = (int)cp_getPoints(cp_currentUser());
-	} else {
-	$Mypoint = 0;
-	}
+		if ( function_exists( 'cp_getPoints') ){
+			$Mypoint = (int)cp_getPoints(cp_currentUser());		
+		} elseif(function_exists( 'mycred_get_settings' ) ) {
+			global $current_user;
+     		get_currentuserinfo();
+			//$user_id = bp_displayed_user_id();
+			$user_id = $current_user->ID;
+			$mycred = mycred_get_settings();
+			$balance = $mycred->get_users_cred( $user_id );
+			//echo 'Your balance is ' . $mycred->format_creds( $balance );
+			$Mypoint = (int)$balance;
+		} else {
+			$Mypoint = 0;
+		}
+	
 	if($Mypoint <  $_POST['point']){
 		echo __('You dont have required points to send that Gift. You can choose another gift!', 'bp-gifts');
 		exit;

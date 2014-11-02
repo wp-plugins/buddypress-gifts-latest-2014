@@ -30,7 +30,7 @@ define ( 'BP_GIFTS_PLUGIN_DIR', dirname( __FILE__ ) );
 function bp_gifts_init() {
 
 	require( dirname( __FILE__ ) . '/includes/bp-gifts-core.php' );
-	if ( version_compare( BP_VERSION, '1.3', '>' ) )
+	if ( version_compare( BP_VERSION, '1.4', '>' ) )
 		require( dirname( __FILE__ ) . '/includes/bp-gifts-loader.php' );
 
 }
@@ -108,11 +108,11 @@ function bp_gifts_activate() {
 
 	update_site_option( 'bp-gifts-db-version', BP_GIFTS_DB_VERSION );
 	
-	if ( !is_plugin_active('buddypress/bp-loader.php') ||!is_plugin_active('cubepoints/cubepoints.php') ) {
+	if ( !is_plugin_active('buddypress/bp-loader.php') || (!is_plugin_active('cubepoints/cubepoints.php') && !is_plugin_active('mycred/mycred.php')) ) {
 	// Deactivate the plugin
 	deactivate_plugins(__FILE__);
 	// Throw an error in the wordpress admin console
-	$error_message = __('This plugin requires <a href="https://wordpress.org/plugins/buddypress/">Buddypress</a> &amp; <a href="http://wordpress.org/extend/plugins/cubepoints/">Cubepoints</a> plugins to be active!', 'buddypress');
+	$error_message = __('This plugin requires <a href="https://wordpress.org/plugins/buddypress/" target="_blank">Buddypress</a> &amp; (<a href="http://wordpress.org/extend/plugins/cubepoints/" target="_blank">Cubepoints</a> OR <a href="https://wordpress.org/plugins/mycred/" target="_blank">MyCred</a>) plugins to be active!', 'buddypress');
 	die($error_message);
 	}
 

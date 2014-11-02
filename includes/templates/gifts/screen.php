@@ -82,10 +82,23 @@
 <?php if (is_user_logged_in() && !bp_is_my_profile()) {
 	
 	// Check if Cubepoints and cubepoints buddypress integration is alredy installed
-	 
-	 if ( function_exists( 'my_bp_gift_given_add_cppoints' ) ) {
-	
-		$Mypoint = (int)cp_getPoints(cp_currentUser());		
+
+	 if ( function_exists( 'my_bp_gift_given_add_cppoints' ) || function_exists( 'mycred_get_settings' )) {
+		 
+		
+		if ( function_exists( 'my_bp_gift_given_add_cppoints') ){
+			$Mypoint = (int)cp_getPoints(cp_currentUser());		
+		} else {
+			global $current_user;
+     		get_currentuserinfo();
+			//$user_id = bp_displayed_user_id();
+			$user_id = $current_user->ID;
+			$mycred = mycred_get_settings();
+			$balance = $mycred->get_users_cred( $user_id );
+			//echo 'Your balance is ' . $mycred->format_creds( $balance );
+			$Mypoint = (int)$balance;
+		}
+		
 		$Giftpoints = (int)get_option('bp_gift_given_cp_bp');
 		
 		$CheckMyPoints = $Mypoint + $Giftpoints;

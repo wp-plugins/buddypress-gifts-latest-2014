@@ -43,4 +43,15 @@
  add_filter( 'bp_gifts_data_point_before_save', 'wp_filter_kses', 1 );
  add_filter( 'bp_gifts_single_newgifts_notification', 'wp_filter_kses', 1 );
 
+ 	function register_buddypress_gifts_hook( $installed ){
+	$installed['hook_id'] = array(
+		'title'       => __( 'Buddpress Gifts', 'textdomain' ),
+		'description' => __( 'Buddpress Gifts Points Integration', 'textdomain' ),
+		'callback'    => array( 'Hook_Class' )
+	);
+	return $installed;
+	}
+ 
+ add_filter( 'mycred_setup_hooks', 'register_buddypress_gifts_hook',1 );
+
 ?>

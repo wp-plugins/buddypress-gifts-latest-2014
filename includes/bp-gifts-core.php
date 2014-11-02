@@ -612,10 +612,26 @@ function bp_gifts_record_activity( $args = '' ) {
 }
 
 function bp_gifts_record_points(){
-
-		if( function_exists('cp_alterPoints') && is_user_logged_in() ){
+		
+		
+		if(is_user_logged_in()){
+		if( function_exists('cp_alterPoints')){
 			cp_alterPoints(cp_currentUser(), -($_POST['point']));
 			cp_log('Points Deducted for Gift', cp_currentUser(), -($_POST['point']), Gifts);
+		} else {
+			global $current_user;
+     		get_currentuserinfo();
+			//$user_id = bp_displayed_user_id();
+			$user_id = $current_user->ID;
+			$mycred = mycred_get_settings();
+			$mycred->add_creds(
+				$user_id, // reference id
+				$user_id, // the user id
+				0-($_POST['point']), // amount, negative value means deduction
+				'Points Deducted for Gift' // Log entry
+			);
+		
+		}
 		}
 
 }
@@ -626,8 +642,6 @@ function bp_gifts_record_points(){
 function bp_gifts_format_notifications( $action, $item_id, $secondary_item_id, $total_items ) {
 
 	global $bp;
-
-
 
 	switch ( $action ) {
 
