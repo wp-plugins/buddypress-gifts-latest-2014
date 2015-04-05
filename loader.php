@@ -6,8 +6,8 @@
 Plugin Name: Buddypress Gifts Latest 2014
 Plugin URI: http://wordpress.org/extend/plugins/buddypress-gifts-latest-2014/
 Description: Third life of popular Gifts component for buddypress.
-Version: 1.4
-Revision Date: 07 01, 2014
+Version: 1.5
+Revision Date: 06 04, 2015
 Requires at least: WP 3.3.1, BuddyPress 1.5.1
 Tested up to: WP 3.8.1, BuddyPress 1.9
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -56,7 +56,7 @@ function bp_gifts_activate() {
 				gift_name varchar(100) NOT NULL,
 				gift_image varchar(100) NOT NULL,
 				category varchar(100) NOT NULL DEFAULT 'gift',
-				point bigint(20) NOT NULL DEFAULT '0',
+				point decimal(10,5) NOT NULL DEFAULT '0',
 			    KEY gift_name (gift_name),
 				KEY category (category)
 		 	   ) {$charset_collate};";

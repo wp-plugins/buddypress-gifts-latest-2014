@@ -4,7 +4,7 @@ Contributors: Amreeta Ray
 Tags: buddypress, gifts, updated, latest, 2014, social networking, fun, community
 Requires at least: WordPress 3.8.1, BuddyPress 1.9.1
 Tested up to: WordPress 3.8.1 / BuddyPress 1.9.1
-Stable tag: 1.4
+Stable tag: 1.5
 
 Latest development of popular plugin Buddypress Gifts. Send a gift image and message to user in BuddyPress profile using activity stream function.
 
@@ -87,3 +87,5 @@ Report bugs at <a href="http://smartyblog.com/">http://smartyblog.com/</a>.
 * wordpress database error corrected
 = 1.4 =
 * Added MyCred Point system. Any gifts sent will deduct mycred points(if it has any) from the user.
+= 1.5 =
+* Based on user requirements integer value of points is changed to floating point so you can have for eg 5.52 points.

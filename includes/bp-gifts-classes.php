@@ -146,7 +146,7 @@ class BP_Gifts {
 
 						category = %s,
 
-						point = %d
+						point = %f
 
 					WHERE id = %d",
 
@@ -180,7 +180,7 @@ class BP_Gifts {
 
 					) VALUES ( 
 
-						%d, %d, %d, %d 
+						%d, %d, %d, %f 
 
 					)", 
 
@@ -298,7 +298,7 @@ function bp_gifts_newgift($giftname, $giftimage, $category = 'gifts', $point = 0
 
 	global $bp, $wpdb;
 
-	$insertgift = $wpdb->prepare("INSERT INTO {$bp->gifts->table_name} (gift_name, gift_image, category, point) VALUES (%s, %s, %s, %d)",$giftname, $giftimage, $category, $point);
+	$insertgift = $wpdb->prepare("INSERT INTO {$bp->gifts->table_name} (gift_name, gift_image, category, point) VALUES (%s, %s, %s, %f)",$giftname, $giftimage, $category, $point);
 
 	$newgift = $wpdb->query( $insertgift );
 
