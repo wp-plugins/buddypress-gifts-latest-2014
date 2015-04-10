@@ -623,7 +623,7 @@ function bp_gifts_record_points(){
      		get_currentuserinfo();
 			//$user_id = bp_displayed_user_id();
 			$user_id = $current_user->ID;
-			$mycred = mycred_get_settings();
+			$mycred = mycred();
 			$mycred->add_creds(
 				$user_id, // reference id
 				$user_id, // the user id
